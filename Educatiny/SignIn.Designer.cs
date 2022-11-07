@@ -36,7 +36,7 @@
             // 
             // signinbtn
             // 
-            this.signinbtn.Location = new System.Drawing.Point(205, 177);
+            this.signinbtn.Location = new System.Drawing.Point(109, 161);
             this.signinbtn.Name = "signinbtn";
             this.signinbtn.Size = new System.Drawing.Size(94, 29);
             this.signinbtn.TabIndex = 0;
@@ -46,25 +46,25 @@
             // 
             // passwordbox
             // 
-            this.passwordbox.Location = new System.Drawing.Point(196, 118);
+            this.passwordbox.Location = new System.Drawing.Point(90, 104);
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.PlaceholderText = "Password";
-            this.passwordbox.Size = new System.Drawing.Size(125, 27);
+            this.passwordbox.Size = new System.Drawing.Size(156, 27);
             this.passwordbox.TabIndex = 1;
             this.passwordbox.UseSystemPasswordChar = true;
             // 
             // emailbox
             // 
-            this.emailbox.Location = new System.Drawing.Point(196, 64);
+            this.emailbox.Location = new System.Drawing.Point(90, 50);
             this.emailbox.Name = "emailbox";
             this.emailbox.PlaceholderText = "Email";
-            this.emailbox.Size = new System.Drawing.Size(125, 27);
+            this.emailbox.Size = new System.Drawing.Size(156, 27);
             this.emailbox.TabIndex = 2;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(214, 227);
+            this.linkLabel1.Location = new System.Drawing.Point(122, 193);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(61, 20);
             this.linkLabel1.TabIndex = 3;
@@ -76,13 +76,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 273);
+            this.ClientSize = new System.Drawing.Size(319, 268);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.emailbox);
             this.Controls.Add(this.passwordbox);
             this.Controls.Add(this.signinbtn);
             this.Name = "SignIn";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.SignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

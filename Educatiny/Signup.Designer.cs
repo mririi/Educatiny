@@ -85,7 +85,8 @@
             this.Controls.Add(this.passbox);
             this.Controls.Add(this.emailbox);
             this.Name = "Signup";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Register";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

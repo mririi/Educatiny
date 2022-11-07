@@ -19,17 +19,25 @@ namespace Educatiny
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Cours window = new Cours();
+            window.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Quiz window = new Quiz();
+            window.Show();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Enjoy window = new Enjoy();
+            window.Show();
         }
     }
 }

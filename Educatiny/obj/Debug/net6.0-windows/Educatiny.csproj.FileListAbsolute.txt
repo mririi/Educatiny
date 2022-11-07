@@ -24,3 +24,11 @@ C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educat
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Signup.resources
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.SignIn.resources
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Home.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Cours.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Enjoy.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Notes.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Quiz.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Chapitre.resources
