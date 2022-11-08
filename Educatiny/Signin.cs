@@ -19,7 +19,7 @@ namespace Educatiny
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-1QNC461\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
         private void signinbtn_Click(object sender, EventArgs e)
         {
             try

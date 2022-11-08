@@ -32,3 +32,10 @@ C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Azure.
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\System.Memory.Data.dll
 C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.Chapitre.resources
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Wassim\source\repos\Educatiny\Educatiny\obj\Debug\net6.0-windows\Educatiny.ChapitreContent.resources

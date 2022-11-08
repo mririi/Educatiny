@@ -22,7 +22,7 @@ namespace Educatiny
 
         
         int Y = 0;
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-1QNC461\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
 
         private void OnButtonClick(object sender, EventArgs e)
         {
@@ -43,7 +43,14 @@ namespace Educatiny
                 btn.Name = dtable.Rows[i][1].ToString();
                 btn.Click += new EventHandler(OnButtonClick);
                 btn.Size = new Size(300, 100);
-                btn.Location = new Point(90 , 110 * (Y + 1));
+                if(i % 2 == 0)
+                {
+                    btn.Location = new Point(90, 100 * (Y + 1));
+                }
+                else
+                {
+                btn.Location = new Point(450, 100 * Y);
+                }
                 Y++;
                 Controls.Add(btn);
             }

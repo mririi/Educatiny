@@ -13,19 +13,19 @@ namespace Educatiny
             InitializeComponent();
         }
         int Y = 0;
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-1QNC461\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
 
         private void OnButtonClick(object sender, EventArgs e)
         {
             string matiere = ((Button)sender).Text;
-            Chapitre ch = new Chapitre();
+            ChapitreContent ch = new ChapitreContent();
             ch.stdname = matiere;
             ch.Show();
         }
         private void Chapitre_Load(object sender, EventArgs e)
         {
             label1.Text += stdname;
-            SqlDataAdapter cmd = new SqlDataAdapter("select * from [Chapitre] where ID=(select ID from Matiere where nom='"+stdname+"')", con);
+            SqlDataAdapter cmd = new SqlDataAdapter("select * from [Chapitre] where matiereID=(select ID from Matiere where nom='"+stdname+"')", con);
             DataTable dtable = new DataTable();
             cmd.Fill(dtable);
             for (int i = 0; i < dtable.Rows.Count; i++)
@@ -35,7 +35,14 @@ namespace Educatiny
                 btn.Name = dtable.Rows[i][1].ToString();
                 btn.Click += new EventHandler(OnButtonClick);
                 btn.Size = new Size(300, 100);
-                btn.Location = new Point(90, 110 * (Y + 1));
+                if (i % 2 == 0)
+                {
+                    btn.Location = new Point(90, 100 * (Y + 1));
+                }
+                else
+                {
+                    btn.Location = new Point(450, 100 * Y);
+                }
                 Y++;
                 Controls.Add(btn);
             }
