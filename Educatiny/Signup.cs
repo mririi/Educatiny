@@ -29,9 +29,13 @@ namespace Educatiny
         {
             try
             {
-            SqlCommand cmd = new SqlCommand("insert into [User] (email,password) values (@email,@password)", con);
+            SqlCommand cmd = new SqlCommand("insert into [User] (email,password,nom,prenom,sexe,age) values (@email,@password,@nom,@prenom,@sexe,@age)", con);
             cmd.Parameters.AddWithValue("@email", emailbox.Text);
             cmd.Parameters.AddWithValue("@password", passbox.Text);
+            cmd.Parameters.AddWithValue("@nom", nomBox.Text);
+            cmd.Parameters.AddWithValue("@prenom", prenomBox.Text);
+            cmd.Parameters.AddWithValue("@sexe", sexeBox.Text);
+            cmd.Parameters.AddWithValue("@age", ageBox.Text);
             con.Open();
             cmd.ExecuteNonQuery();
             SignIn signIn = new SignIn();

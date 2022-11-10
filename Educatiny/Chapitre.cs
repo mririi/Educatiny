@@ -1,7 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
-
 namespace Educatiny
 {
     public partial class Chapitre : Form

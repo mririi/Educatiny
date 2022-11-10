@@ -23,7 +23,7 @@ namespace Educatiny
         
         int Y = 0;
         SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
-
+        public string user { get; set; }
         private void OnButtonClick(object sender, EventArgs e)
         {
             string matiere = ((Button)sender).Text;

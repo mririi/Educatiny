@@ -16,7 +16,7 @@ namespace Educatiny
         {
             InitializeComponent();
         }
-
+        public string user { get; set; }
         private void button1_Click(object sender, EventArgs e)
         {
             Cours window = new Cours();
@@ -36,7 +36,18 @@ namespace Educatiny
 
         private void button3_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
             Enjoy window = new Enjoy();
+            window.user=user;
             window.Show();
         }
     }

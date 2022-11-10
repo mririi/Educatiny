@@ -30,6 +30,7 @@ namespace Educatiny
                 if (dtable.Rows.Count > 0)
                 {
                     Home home = new Home();
+                    home.user= dtable.Rows[0][0].ToString();
                     home.Show();
                     this.Hide();
                 }

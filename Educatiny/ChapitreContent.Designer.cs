@@ -28,39 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
+            this.webView2 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // webView21
+            // webView2
             // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(-3, -1);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(1169, 600);
-            this.webView21.Source = new System.Uri("https://www.youtube.com/watch?v=igcoDFokKzU", System.UriKind.Absolute);
-            this.webView21.TabIndex = 0;
-            this.webView21.ZoomFactor = 1D;
-            this.webView21.Click += new System.EventHandler(this.webView21_Click_1);
+            this.webView2.AllowExternalDrop = true;
+            this.webView2.CreationProperties = null;
+            this.webView2.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView2.Location = new System.Drawing.Point(0, -1);
+            this.webView2.Name = "webView2";
+            this.webView2.Size = new System.Drawing.Size(1168, 607);
+            this.webView2.TabIndex = 0;
+            this.webView2.ZoomFactor = 1D;
+            this.webView2.Click += new System.EventHandler(this.webView2_Click);
             // 
             // ChapitreContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 601);
-            this.Controls.Add(this.webView21);
+            this.Controls.Add(this.webView2);
             this.Name = "ChapitreContent";
             this.Text = "ChapitreContent";
             this.Load += new System.EventHandler(this.ChapitreContent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView2;
     }
 }

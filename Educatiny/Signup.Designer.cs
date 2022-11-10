@@ -32,11 +32,15 @@
             this.passbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.nomBox = new System.Windows.Forms.TextBox();
+            this.prenomBox = new System.Windows.Forms.TextBox();
+            this.ageBox = new System.Windows.Forms.TextBox();
+            this.sexeBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // emailbox
             // 
-            this.emailbox.Location = new System.Drawing.Point(87, 56);
+            this.emailbox.Location = new System.Drawing.Point(49, 65);
             this.emailbox.Name = "emailbox";
             this.emailbox.PlaceholderText = "Email";
             this.emailbox.Size = new System.Drawing.Size(161, 27);
@@ -46,7 +50,7 @@
             // passbox
             // 
             this.passbox.BackColor = System.Drawing.SystemColors.Window;
-            this.passbox.Location = new System.Drawing.Point(87, 120);
+            this.passbox.Location = new System.Drawing.Point(49, 127);
             this.passbox.Name = "passbox";
             this.passbox.PlaceholderText = "Password";
             this.passbox.Size = new System.Drawing.Size(161, 27);
@@ -56,7 +60,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 181);
+            this.button1.Location = new System.Drawing.Point(180, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 2;
@@ -67,7 +71,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(127, 226);
+            this.linkLabel1.Location = new System.Drawing.Point(193, 296);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(54, 20);
             this.linkLabel1.TabIndex = 3;
@@ -75,11 +79,47 @@
             this.linkLabel1.Text = "Sign In";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // nomBox
+            // 
+            this.nomBox.Location = new System.Drawing.Point(254, 65);
+            this.nomBox.Name = "nomBox";
+            this.nomBox.PlaceholderText = "Nom";
+            this.nomBox.Size = new System.Drawing.Size(161, 27);
+            this.nomBox.TabIndex = 4;
+            // 
+            // prenomBox
+            // 
+            this.prenomBox.Location = new System.Drawing.Point(254, 122);
+            this.prenomBox.Name = "prenomBox";
+            this.prenomBox.PlaceholderText = "Prenom";
+            this.prenomBox.Size = new System.Drawing.Size(161, 27);
+            this.prenomBox.TabIndex = 5;
+            // 
+            // ageBox
+            // 
+            this.ageBox.Location = new System.Drawing.Point(254, 192);
+            this.ageBox.Name = "ageBox";
+            this.ageBox.PlaceholderText = "Age";
+            this.ageBox.Size = new System.Drawing.Size(161, 27);
+            this.ageBox.TabIndex = 7;
+            // 
+            // sexeBox
+            // 
+            this.sexeBox.Location = new System.Drawing.Point(49, 192);
+            this.sexeBox.Name = "sexeBox";
+            this.sexeBox.PlaceholderText = "Sexe";
+            this.sexeBox.Size = new System.Drawing.Size(161, 27);
+            this.sexeBox.TabIndex = 6;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 268);
+            this.ClientSize = new System.Drawing.Size(451, 354);
+            this.Controls.Add(this.ageBox);
+            this.Controls.Add(this.sexeBox);
+            this.Controls.Add(this.prenomBox);
+            this.Controls.Add(this.nomBox);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passbox);
@@ -99,5 +139,9 @@
         private TextBox passbox;
         private Button button1;
         private LinkLabel linkLabel1;
+        private TextBox nomBox;
+        private TextBox prenomBox;
+        private TextBox ageBox;
+        private TextBox sexeBox;
     }
 }
