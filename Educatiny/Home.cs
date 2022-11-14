@@ -36,7 +36,9 @@ namespace Educatiny
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            Notes window = new Notes();
+            window.user = user;
+            window.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)
