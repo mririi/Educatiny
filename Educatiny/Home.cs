@@ -31,6 +31,7 @@ namespace Educatiny
         private void button2_Click(object sender, EventArgs e)
         {
             Quiz window = new Quiz();
+            window.user = user;
             window.Show();
         }
 

@@ -14,14 +14,16 @@ namespace Educatiny
 {
     public partial class SignIn : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
         public SignIn()
         {
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
         private void signinbtn_Click(object sender, EventArgs e)
         {
+            if (emailbox.Text!="" && passwordbox.Text != "")
+            {
             try
             {
                 SqlDataAdapter cmd = new SqlDataAdapter("select * from [User] where email = '" + emailbox.Text + "' and password= '" + passwordbox.Text + "'", con);
@@ -47,11 +49,11 @@ namespace Educatiny
             {
                 con.Close();
             }
-        }
-
-        private void SignIn_Load(object sender, EventArgs e)
-        {
-
+            }
+            else
+            {
+                MessageBox.Show("Please fill the email and password fields");
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -59,6 +61,11 @@ namespace Educatiny
             Signup signup = new Signup();
             signup.Show();
             this.Hide();
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,6 +22,9 @@
     <Compile Update="Quiz.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="QuizContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Signin.cs">
       <SubType>Form</SubType>
     </Compile>

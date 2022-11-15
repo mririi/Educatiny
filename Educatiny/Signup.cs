@@ -1,4 +1,5 @@
 using System.Data.SqlClient;
+using System.Net.Mail;
 
 namespace Educatiny
 {
@@ -23,10 +24,48 @@ namespace Educatiny
         {
 
         }
+        private static bool IsValid(string email)
+        {
+            var valid = true;
 
+            try
+            {
+                var emailAddress = new MailAddress(email);
+            }
+            catch
+            {
+                valid = false;
+            }
+
+            return valid;
+        }
         SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
+            /*if (emailbox.Text == "" || nomBox.Text == "" || prenomBox.Text == "" || sexeBox.Text == "" || ageBox.Text == "")
+            {
+                MessageBox.Show("Les champs ne doivent pas etre vide!");
+                return;
+            }*/
+            if (IsValid(emailbox.Text)==false)
+            {
+                MessageBox.Show("Saisir un email valide!");
+                return;
+            }
+            if (passbox.Text.Length<6)
+            {
+                MessageBox.Show("Saisir un mot de passe de taille plus que 6 characters!");
+                return;
+            }
+            try
+            {
+                Int32.Parse(ageBox.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("L'age doit etre un entier!");
+                return;
+            }
             try
             {
             SqlCommand cmd = new SqlCommand("insert into [User] (email,password,nom,prenom,sexe,age) values (@email,@password,@nom,@prenom,@sexe,@age)", con);
