@@ -50,7 +50,6 @@ namespace Educatiny
         {
             if (i < nbq)
             {
-                
                 label2.Text = qtable.Rows[i][1].ToString();
                 SqlDataAdapter cmd1 = new SqlDataAdapter("select * from [Reponse] where IDQuestion='" + qtable.Rows[i][0].ToString() + "'", con);
                 DataTable dtable1 = new DataTable();

@@ -50,7 +50,7 @@ namespace Educatiny
             SqlDataAdapter cmd = new SqlDataAdapter("select lien from [Jeu] where IDLoisir='" + id + "'", con);
             DataTable dtable = new DataTable();
             cmd.Fill(dtable);
-            String Link = "https://www.youtube.com";
+            String Link = "https://www.friv.com/z/games/";
             if (dtable.Rows.Count > 0)
             {
                 Link = dtable.Rows[0][0].ToString();
@@ -60,7 +60,7 @@ namespace Educatiny
             }
             else
             {
-                webView21.CoreWebView2.Navigate("https://www.google.com");
+                webView21.CoreWebView2.Navigate("https://www.friv.com/z/games/");
             }
         }
     }

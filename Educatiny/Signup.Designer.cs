@@ -36,6 +36,7 @@
             this.prenomBox = new System.Windows.Forms.TextBox();
             this.ageBox = new System.Windows.Forms.TextBox();
             this.sexeBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // emailbox
@@ -60,7 +61,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(180, 251);
+            this.button1.Location = new System.Drawing.Point(179, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 2;
@@ -71,7 +72,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(193, 296);
+            this.linkLabel1.Location = new System.Drawing.Point(192, 347);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(54, 20);
             this.linkLabel1.TabIndex = 3;
@@ -111,11 +112,22 @@
             this.sexeBox.Size = new System.Drawing.Size(161, 27);
             this.sexeBox.TabIndex = 6;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(157, 247);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.Text = "Loisir";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 354);
+            this.ClientSize = new System.Drawing.Size(451, 405);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.ageBox);
             this.Controls.Add(this.sexeBox);
             this.Controls.Add(this.prenomBox);
@@ -143,5 +155,6 @@
         private TextBox prenomBox;
         private TextBox ageBox;
         private TextBox sexeBox;
+        private ComboBox comboBox1;
     }
 }
