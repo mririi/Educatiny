@@ -24,6 +24,7 @@ namespace Educatiny
         public ChapitreContent()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void webView21_Click(object sender, EventArgs e)

@@ -1,6 +1,5 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
-using System.Drawing;
 namespace Educatiny
 {
     public partial class Chapitre : Form
@@ -11,7 +10,7 @@ namespace Educatiny
         {
             InitializeComponent();
         }
-        int Y = 0;
+        private int Y = 0;
         SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
 
         private void OnButtonClick(object sender, EventArgs e)

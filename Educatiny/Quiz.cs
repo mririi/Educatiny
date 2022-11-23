@@ -13,12 +13,13 @@ namespace Educatiny
 {
     public partial class Quiz : Form
     {
+        public string user { get; set; }
+        private int Y = 0;
         public Quiz()
         {
             InitializeComponent();
+            CenterToScreen();
         }
-        public string user { get; set; }
-        int Y = 0;
         SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
         private void OnButtonClick(object sender, EventArgs e)
         {

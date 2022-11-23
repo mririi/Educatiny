@@ -17,6 +17,7 @@ namespace Educatiny
         public Enjoy()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         public string user { get; set; }
         private void webView21_Click(object sender, EventArgs e)

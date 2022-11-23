@@ -13,36 +13,56 @@ namespace Educatiny
 {
     public partial class QuizContent : Form
     {
-        DataTable qtable = new DataTable();
-        string questID;
-        int nbrightanswers = 0;
-        int nbq = 0;
-        int nbradio = 0;
-        int Y = 0;
-        string answer;
-        int i = 0;
-        double note = 0;
-        SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
+        private DataTable qtable = new DataTable();
+        private string questID;
+        private int nbrightanswers = 0;
+        private int nbq = 0;
+        private int nbbtn = 0;
+        private int Y = 0;
+        private string answer;
+        private int i = 0;
+        private double note = 0;
+        private String type;
+        private SqlConnection con = new SqlConnection("Data Source=WASSIM-PC\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True");
+
         public string stdname { get; set; }
         public string user { get; set; }
         public QuizContent()
         {
             InitializeComponent();
-
+            CenterToScreen();
         }
         
         private void OnButtonClick(object sender, EventArgs e)
         {
-            answer = ((RadioButton)sender).Text;
+            if (qtable.Rows[i][2].ToString() == "Radiobutton")
+            {
+                answer = ((RadioButton)sender).Text;
+            }else if (qtable.Rows[i][2].ToString() == "Checkbox")
+            {
+                answer = ((CheckBox)sender).Text;
+            }
         }
         
-        private void deletebtn(int nb)
+        private void deletebtn()
         {
-            for (int i = 0; i < nb; i++)
+            if (type == "Radiobutton")
             {
-                foreach (RadioButton rb in Controls.OfType<RadioButton>())
+                for (int i = 0; i < nbbtn; i++)
                 {
-                    Controls.Remove(rb);
+                    foreach (RadioButton rb in Controls.OfType<RadioButton>())
+                    {
+                        Controls.Remove(rb);
+                    }
+                }
+            }if(type == "Checkbox")
+            {
+                for (int i = 0; i < nbbtn; i++)
+                {
+                    foreach (CheckBox rb in Controls.OfType<CheckBox>())
+                    {
+                        Controls.Remove(rb);
+                    }
                 }
             }
         }
@@ -54,28 +74,70 @@ namespace Educatiny
                 SqlDataAdapter cmd1 = new SqlDataAdapter("select * from [Reponse] where IDQuestion='" + qtable.Rows[i][0].ToString() + "'", con);
                 DataTable dtable1 = new DataTable();
                 cmd1.Fill(dtable1);
-                nbradio = dtable1.Rows.Count;
+                nbbtn = dtable1.Rows.Count;
                 for (int j = 0; j < dtable1.Rows.Count; j++)
                 {
-                    RadioButton btn = new RadioButton();
-                    btn.Text = dtable1.Rows[j][1].ToString();
-                    btn.Name = dtable1.Rows[j][1].ToString();
-                    if (dtable1.Rows[j][2].ToString()=="1")
+                    if (qtable.Rows[i][2].ToString() == "Radiobutton")
                     {
-                        nbrightanswers++;
+                        type = "Radiobutton";
+                        RadioButton btn = new RadioButton();
+                        btn.Text = dtable1.Rows[j][1].ToString();
+                        btn.Name = dtable1.Rows[j][1].ToString();
+                        if (dtable1.Rows[j][2].ToString() == "1")
+                        {
+                            nbrightanswers++;
+                        }
+                        btn.Click += new EventHandler(OnButtonClick);
+                        btn.Size = new Size(150, 150);
+                        if (dtable1.Rows.Count < 4)
+                        {
+                            btn.Location = new Point(300, 90 * (Y + 1));
+                        }
+                        else
+                        {
+                        if (j % 2 == 0)
+                        {
+                            btn.Location = new Point(300, 80 * (Y + 1));
+                        }
+                        else
+                        {
+                            btn.Location = new Point(450, 80 * Y);
+                        }
+                        }
+                        Y++;
+                        Controls.Add(btn);
                     }
-                    btn.Click += new EventHandler(OnButtonClick);
-                    btn.Size = new Size(150, 150);
-                    if (j % 2 == 0)
+                    else if (qtable.Rows[i][2].ToString() == "Checkbox")
                     {
-                        btn.Location = new Point(300, 120 * (Y + 1));
+                        type = "Checkbox";
+                        CheckBox btn = new CheckBox();
+                        btn.Text = dtable1.Rows[j][1].ToString();
+                        btn.Name = dtable1.Rows[j][1].ToString();
+                        if (dtable1.Rows[j][2].ToString() == "1")
+                        {
+                            nbrightanswers++;
+                        }
+                        btn.Click += new EventHandler(OnButtonClick);
+                        btn.Size = new Size(150, 150);
+                        if (dtable1.Rows.Count < 4)
+                        {
+                        btn.Location = new Point(300, 90 * (Y + 1));
+                        }
+                        else
+                        {
+                            if (j % 2 == 0)
+                            {
+                                btn.Location = new Point(300, 80 * (Y + 1));
+                            }
+                            else
+                            {
+                                btn.Location = new Point(450, 80 * Y);
+                            }
+                        }
+                        Y++;
+                        Controls.Add(btn);
                     }
-                    else
-                    {
-                        btn.Location = new Point(450, 120 * Y);
-                    }
-                    Y++;
-                    Controls.Add(btn);
+                    
                     
                 }
                 questID = qtable.Rows[i][0].ToString();
@@ -107,7 +169,7 @@ namespace Educatiny
         private void button1_Click(object sender, EventArgs e)
         {
             i++;
-            deletebtn(nbradio);
+            deletebtn();
             checkanswer(answer);
             askQuestion(i);
             if (i == nbq)

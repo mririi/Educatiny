@@ -16,6 +16,7 @@ namespace Educatiny
         public Notes()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         public string user { get; set; }
 
