@@ -49,7 +49,15 @@ namespace Educatiny
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (emailbox.Text == "" || nomBox.Text == "" || prenomBox.Text == "" || sexeBox.Text == "" || ageBox.Text == "")
+            SqlDataAdapter cmdd = new SqlDataAdapter("select * from [User] where email='" + emailbox.Text + "'", con);
+            DataTable dtablee = new DataTable();
+            cmdd.Fill(dtablee);
+            if (dtablee.Rows.Count > 0)
+            {
+                MessageBox.Show("Email déja existe!");
+                return;
+            }
+            if (emailbox.Text == "" || nomBox.Text == "" || prenomBox.Text == "" || sexeBox.Text == "" || ageBox.Text == "" || comboBox1.SelectedIndex<0)
             {
                 MessageBox.Show("Les champs ne doivent pas etre vide!");
                 return;
