@@ -47,7 +47,7 @@
             this.signinbtn.Name = "signinbtn";
             this.signinbtn.Size = new System.Drawing.Size(208, 45);
             this.signinbtn.TabIndex = 0;
-            this.signinbtn.Text = "Sign In";
+            this.signinbtn.Text = "Connexion";
             this.signinbtn.UseVisualStyleBackColor = true;
             this.signinbtn.Click += new System.EventHandler(this.signinbtn_Click);
             // 
@@ -56,7 +56,7 @@
             this.passwordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordbox.Location = new System.Drawing.Point(295, 289);
             this.passwordbox.Name = "passwordbox";
-            this.passwordbox.PlaceholderText = "Password";
+            this.passwordbox.PlaceholderText = "Mot de passe";
             this.passwordbox.Size = new System.Drawing.Size(180, 20);
             this.passwordbox.TabIndex = 1;
             this.passwordbox.UseSystemPasswordChar = true;
@@ -76,12 +76,12 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.Green;
-            this.linkLabel1.Location = new System.Drawing.Point(336, 389);
+            this.linkLabel1.Location = new System.Drawing.Point(311, 387);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(61, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(119, 20);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign Up";
+            this.linkLabel1.Text = "Créer un compte";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 

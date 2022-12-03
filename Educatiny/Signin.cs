@@ -52,7 +52,7 @@ namespace Educatiny
             }
             else
             {
-                MessageBox.Show("Please fill the email and password fields");
+                MessageBox.Show("Les champs ne doivent pas etre vide!");
             }
         }
 

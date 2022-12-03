@@ -35,11 +35,11 @@ namespace Educatiny
                 btn.Size = new Size(300, 100);
                 if (i % 2 == 0)
                 {
-                    btn.Location = new Point(90, 100 * (Y + 1));
+                    btn.Location = new Point(90, 140 * (Y + 1));
                 }
                 else
                 {
-                    btn.Location = new Point(450, 100 * Y);
+                    btn.Location = new Point(450, 140 * Y);
                 }
                 Y++;
                 Controls.Add(btn);

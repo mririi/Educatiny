@@ -49,14 +49,7 @@ namespace Educatiny
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter cmdd = new SqlDataAdapter("select * from [User] where email='" + emailbox.Text + "'", con);
-            DataTable dtablee = new DataTable();
-            cmdd.Fill(dtablee);
-            if (dtablee.Rows.Count > 0)
-            {
-                MessageBox.Show("Email déja existe!");
-                return;
-            }
+            
             if (emailbox.Text == "" || nomBox.Text == "" || prenomBox.Text == "" || sexeBox.Text == "" || ageBox.Text == "" || comboBox1.SelectedIndex<0)
             {
                 MessageBox.Show("Les champs ne doivent pas etre vide!");
@@ -65,6 +58,14 @@ namespace Educatiny
             if (IsValid(emailbox.Text)==false)
             {
                 MessageBox.Show("Saisir un email valide!");
+                return;
+            }
+            SqlDataAdapter cmdd = new SqlDataAdapter("select * from [User] where email='" + emailbox.Text + "'", con);
+            DataTable dtablee = new DataTable();
+            cmdd.Fill(dtablee);
+            if (dtablee.Rows.Count > 0)
+            {
+                MessageBox.Show("Email déja existe!");
                 return;
             }
             if (passbox.Text.Length<6)

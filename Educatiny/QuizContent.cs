@@ -47,25 +47,9 @@ namespace Educatiny
 
         private void deletebtn()
         {
-            if (type == "Radiobutton")
+            foreach (FlowLayoutPanel rb in Controls.OfType<FlowLayoutPanel>())
             {
-                for (int i = 0; i < nbbtn; i++)
-                {
-                    foreach (RadioButton rb in Controls.OfType<RadioButton>())
-                    {
-                        Controls.Remove(rb);
-                    }
-                }
-            }
-            if (type == "Checkbox")
-            {
-                for (int i = 0; i < nbbtn; i++)
-                {
-                    foreach (CheckBox rb in Controls.OfType<CheckBox>())
-                    {
-                        Controls.Remove(rb);
-                    }
-                }
+                Controls.Remove(rb);
             }
         }
         private void askQuestion(int i)
@@ -73,10 +57,19 @@ namespace Educatiny
             if (i < nbq)
             {
                 label2.Text = qtable.Rows[i][1].ToString();
+                label2.Location = new System.Drawing.Point(265, 280);
                 SqlDataAdapter cmd1 = new SqlDataAdapter("select * from [Reponse] where IDQuestion='" + qtable.Rows[i][0].ToString() + "'", con);
                 DataTable dtable1 = new DataTable();
                 cmd1.Fill(dtable1);
                 nbbtn = dtable1.Rows.Count;
+
+                FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                flowLayoutPanel.AutoScroll = true;
+                flowLayoutPanel.Location = new System.Drawing.Point(240, 297);
+                flowLayoutPanel.Margin = new System.Windows.Forms.Padding(15);
+                flowLayoutPanel.Padding = new System.Windows.Forms.Padding(30);
+                flowLayoutPanel.Size = new System.Drawing.Size(293, 128);
+                Controls.Add(flowLayoutPanel);
                 for (int j = 0; j < dtable1.Rows.Count; j++)
                 {
                     if (qtable.Rows[i][2].ToString() == "Radiobutton")
@@ -91,24 +84,7 @@ namespace Educatiny
                             nbrightanswers++;
                         }
                         btn.Click += new EventHandler(OnButtonClick);
-                        btn.Size = new Size(150, 150);
-                        if (dtable1.Rows.Count < 4)
-                        {
-                            btn.Location = new Point(300, 120 * (Y + 1));
-                        }
-                        else
-                        {
-                            if (j % 2 == 0)
-                            {
-                                btn.Location = new Point(200, 80 * (Y + 1));
-                            }
-                            else
-                            {
-                                btn.Location = new Point(350, 80 * Y);
-                            }
-                        }
-                        Y++;
-                        Controls.Add(btn);
+                        flowLayoutPanel.Controls.Add(btn);
                     }
                     else if (qtable.Rows[i][2].ToString() == "Checkbox")
                     {
@@ -122,30 +98,10 @@ namespace Educatiny
                             
                         }
                         btn.Click += new EventHandler(OnButtonClick);
-                        btn.Size = new Size(150, 150);
-                        if (dtable1.Rows.Count < 4)
-                        {
-                            btn.Location = new Point(300, 120 * (Y + 1));
-                        }
-                        else
-                        {
-                            if (j % 2 == 0)
-                            {
-                                btn.Location = new Point(200, 80 * (Y + 1));
-                            }
-                            else
-                            {
-                                btn.Location = new Point(350, 80 * Y);
-                            }
-                        }
-                        Y++;
-                        Controls.Add(btn);
+                        flowLayoutPanel.Controls.Add(btn);
                     }
-
-
                 }
                 questID = qtable.Rows[i][0].ToString();
-                Y = 0;
             }
         }
         private void QuizContent_Load(object sender, EventArgs e)

@@ -35,6 +35,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -58,9 +59,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe Print", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 62);
+            this.label1.Size = new System.Drawing.Size(203, 62);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hello there";
+            this.label1.Text = "Bienvenue";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
@@ -125,12 +126,25 @@
             this.panel2.Size = new System.Drawing.Size(743, 2);
             this.panel2.TabIndex = 6;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.CornflowerBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(636, 90);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(93, 20);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Déconnecter";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(741, 621);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
@@ -156,5 +170,6 @@
         private Button button4;
         private Panel panel1;
         private Panel panel2;
+        private LinkLabel linkLabel1;
     }
 }

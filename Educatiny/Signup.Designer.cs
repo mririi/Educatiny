@@ -62,7 +62,7 @@
             this.passbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passbox.Location = new System.Drawing.Point(265, 302);
             this.passbox.Name = "passbox";
-            this.passbox.PlaceholderText = "Password";
+            this.passbox.PlaceholderText = "Mot de passe";
             this.passbox.Size = new System.Drawing.Size(215, 20);
             this.passbox.TabIndex = 1;
             this.passbox.UseSystemPasswordChar = true;
@@ -71,12 +71,12 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Green;
+            this.button1.ForeColor = System.Drawing.Color.LimeGreen;
             this.button1.Location = new System.Drawing.Point(265, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 45);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Sign Up";
+            this.button1.Text = "Créer un compte";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -86,12 +86,12 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.Green;
-            this.linkLabel1.Location = new System.Drawing.Point(348, 418);
+            this.linkLabel1.Location = new System.Drawing.Point(320, 416);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(54, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(79, 20);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign In";
+            this.linkLabel1.Text = "Connexion";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
