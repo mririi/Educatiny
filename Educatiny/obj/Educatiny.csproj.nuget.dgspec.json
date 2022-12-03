@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[4.8.4, )"
             },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "runtime.native.System.Data.SqlClient.sni": {
               "target": "Package",
               "version": "[4.7.0, )"

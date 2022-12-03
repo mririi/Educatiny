@@ -61,7 +61,7 @@ namespace Educatiny
             }
             else
             {
-                webView21.CoreWebView2.Navigate("https://www.friv.com/z/games/");
+                webView21.CoreWebView2.Navigate("https://www.friv.com/");
             }
         }
     }

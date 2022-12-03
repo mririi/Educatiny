@@ -15,9 +15,9 @@ namespace Educatiny
 
         private void OnButtonClick(object sender, EventArgs e)
         {
-            string matiere = ((Button)sender).Text;
+            string chapitre = ((Button)sender).Text;
             ChapitreContent ch = new ChapitreContent();
-            ch.stdname = matiere;
+            ch.stdname = chapitre;
             ch.Show();
         }
         private void Chapitre_Load(object sender, EventArgs e)

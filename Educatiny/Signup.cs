@@ -122,5 +122,10 @@ namespace Educatiny
         {
 
         }
+
+        private void ageBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
